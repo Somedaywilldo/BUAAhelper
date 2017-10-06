@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171004070403) do
+ActiveRecord::Schema.define(version: 20171006145158) do
 
   create_table "articles", force: :cascade do |t|
     t.string   "title"
@@ -28,6 +28,10 @@ ActiveRecord::Schema.define(version: 20171004070403) do
     t.integer  "now_selected"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.string   "course_id"
+    t.string   "course_class"
+    t.string   "required"
+    t.float    "credit"
   end
 
   create_table "microposts", force: :cascade do |t|

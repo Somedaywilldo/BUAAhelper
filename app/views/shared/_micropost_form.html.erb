@@ -2,8 +2,34 @@
   <%= render 'shared/error_messages', object: f.object %>
 
     
-        <ol>
+      <table class="table table-striped">
+         <tr>
+          <th>选择</th>
+          <th>课程代码</th>
+          <th>名称</th>
+          <th>教师</th>
+          <th>时间</th>
+          <th>地点</th>
+          <th>类别</th>
+          <th>性质</th>
+          <th>学分</th>
+          </tr>
+
+        
         	<%Course.all.each do |cou|%>
+
+            <tr>
+              <th><%=check_box_tag 'courses[]',cou.name,false%></th>
+              <th><%=cou.course_id%></th>
+              <th><%=cou.name%></th>
+              <th><%=cou.teacher%></th>
+              <th><%=cou.time%></th>
+              <th><%=cou.place%></th>
+              <th><%=cou.course_class%></th>
+              <th><%=cou.required%></th>
+              <th><%=cou.credit%></th>
+        
+              <!--
             <div class="row">
         		  <li>
                 <div class="col-md-1"> 
@@ -14,9 +40,12 @@
                 </div>
       		    </li>
             </div>
-            
+             -->
+            </tr>
       	  <%end%>
-        </ol>
+        
+
+      </table>
    
 
 
