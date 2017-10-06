@@ -5,15 +5,17 @@ class MicropostsController < ApplicationController
   
   #protect_from_forgery with: :reset_session 
 
+
   def create
 
     message=""
     repeat_course=0
 
     params[:courses].each do |cou|  
-      if(current_user.microposts.find_by(content: cou)==nil)
 
-        @micropost = current_user.microposts.build(content: cou)
+      if(current_user.microposts.find_by(content: get_abstract(cou))==nil)
+
+        @micropost = current_user.microposts.build(content: get_abstract(cou))
 
         if @micropost.save
 
@@ -78,6 +80,14 @@ class MicropostsController < ApplicationController
     def correct_user
       @micropost = current_user.microposts.find_by(id: params[:id]) 
       redirect_to root_url if @micropost.nil?
+    end
+
+    def get_abstract(cou)
+      tmp_str=""
+      now_course=Course.find_by(name:cou)
+      tmp_str="%s || %s || %s || %s || %.1f学分"%[now_course.name,now_course.teacher,now_course.time,
+        now_course.course_class,now_course.credit]
+    
     end
   #skip_before_filter :verify_authenticity_token
 

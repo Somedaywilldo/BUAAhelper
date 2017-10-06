@@ -2,6 +2,7 @@
   <%= render 'shared/error_messages', object: f.object %>
 
     
+      <h3>可选课程</h3>
       <table class="table table-striped">
          <tr>
           <th>选择</th>
@@ -13,6 +14,7 @@
           <th>类别</th>
           <th>性质</th>
           <th>学分</th>
+          <th>已选/容量</th>
           </tr>
 
         
@@ -28,7 +30,7 @@
               <th><%=cou.course_class%></th>
               <th><%=cou.required%></th>
               <th><%=cou.credit%></th>
-        
+              <th><%=cou.now_selected.to_s+"/"+cou.volume.to_s%></th>
               <!--
             <div class="row">
         		  <li>
@@ -47,21 +49,18 @@
 
       </table>
    
-
-
-    
-     
-        <div class="row">
-          <div class="col-md-6"> 
-            <%= f.submit "添加课程", class: "btn btn-success" %> 
-          </div>
-          <div class="col-md-6"> 
-            <%= f.submit "确认无误，选课！", class: "btn btn-danger" %> 
-          </div>
+        <div class="col-md-6"> 
+          <%= f.submit "添加课程", class: "btn btn-success" %> 
         </div>
-    
-  
-
-
+      
+        <!--
+      </div>
+      <div class="row">
+        
+        <div class="col-md-6"> 
+          <%= f.submit "确认无误，选课！", class: "btn btn-danger" %> 
+        </div>
+      </div>
+        -->
 
 <% end %>
