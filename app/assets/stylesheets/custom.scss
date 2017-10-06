@@ -162,7 +162,7 @@ color: red;
 
 .checkbox {
   margin-top: 5px; margin-bottom: 10px; 
-  margin-left: 20px;
+  margin-left: 10px; margin-right: 10px;
   span {
       margin-left: 10px;
       font-weight: normal;
@@ -227,6 +227,7 @@ border: 0; }
   .checkbox {
       margin-top: 10px; 
       margin-bottom: 10px; 
+       margin-left: 20px; margin-right: 20px;
       span {
             margin-left: 20px;
             font-weight: normal;

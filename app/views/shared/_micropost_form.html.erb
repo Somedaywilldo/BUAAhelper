@@ -1,34 +1,37 @@
 <%= form_for(@micropost) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %> 
+  <%= render 'shared/error_messages', object: f.object %>
+
+    
+        <ol>
+        	<%Course.all.each do |cou|%>
+            <div class="row">
+        		  <li>
+                <div class="col-md-1"> 
+                  <%=check_box_tag 'courses[]',cou.name,false%> 
+          			</div> 
+                <div class="col-md-4"> 
+                  <%=f.label :name , cou.name %>
+                </div>
+      		    </li>
+            </div>
+            
+      	  <%end%>
+        </ol>
+   
+
+
+    
+     
+        <div class="row">
+          <div class="col-md-6"> 
+            <%= f.submit "添加课程", class: "btn btn-success" %> 
+          </div>
+          <div class="col-md-6"> 
+            <%= f.submit "确认无误，选课！", class: "btn btn-danger" %> 
+          </div>
+        </div>
+    
   
-  <div class="field">
-    <%= f.text_area :choose, placeholder: "Compose new micropost..." %>
-  </div>
-
-
-  <ol class="courselist">
-  	
-  
-  	<%Course.all.each do |cou|%>
-  
-  		<li class="courselist-item">
-  			<%=f.label :name , cou.name %>
-  			<%=check_box_tag 'courses[]',cou.name,false%>  
-		</li>
-	<%end%>
-
-		
-
-  </ol>
-
-<aside class="col-md-6"> 
-	<%= f.submit "添加课程", class: "btn btn-success" %> 
-</aside>
-
-<div class="col-md-6"> 
-	<%= f.submit "确认无误，选课！", class: "btn btn-danger" %> 
-</div>
-
 
 
 

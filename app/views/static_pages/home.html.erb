@@ -1,30 +1,55 @@
 <% if logged_in? %> 
 
+
+<div class="container">
+  
   <div class="row">
-  <aside class="col-md-6"> 
-    <section class="user_info">
-    <%= render 'shared/user_info' %> </section>
-    <section class="micropost_form">
-    <%= render 'shared/micropost_form' %> </section>
-  </aside>
-  <div class="col-md-6"> 
-    <h3>已选课程</h3>
-  <%= render 'shared/feed' %>
+    <div class="col-md-6"> 
+      
+     
+      <aside>
+        <section class="user_info">
+          <%= render 'shared/user_info' %> 
+        </section>
+      </aside>
+
+
+      <h3>可选课程</h3>
+
+
+        
+   
+      <section class="micropost_form">
+        <%= render 'shared/micropost_form' %> 
+      </section>
+       
+
+      
+    </div>
+
+    <div class="col-md-6"> 
+      <h3>已选课程</h3>
+      
+      <%= render 'shared/feed' %>
+      
+    </div>
+  </div>
+
+  
+
 </div>
-        </div>
 <% else %>
 
 
- <div class="center jumbotron">
-<h1>欢迎使用BUAA选课宝！</h1>
-<h2>
-妈妈再也不用担心你上不去选课网站了~
-</h2>
-<%= link_to "学生注册！", signup_path, class: "btn btn-lg btn-primary" %> </div>
+  <div class="center jumbotron">
+    <h1>欢迎使用BUAA选课宝！</h1>
+    <h2>妈妈再也不用担心你上不去选课网站了~</h2>
+    <%= link_to "学生注册！", signup_path, class: "btn btn-lg btn-primary" %> 
+  </div>
 
 
    <div class="center">
       <%= link_to image_tag("SomedayWill_QR_code.jpg", alt: "SomedayWill_QR_code"),'http://somedaywill.cn/'%>
-  </div>
+
 
 <% end %>
