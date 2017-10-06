@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  teacher: MyString
+  time: MyString
+  place: MyString
+  volume: 1
+  now_selected: 1
+
+two:
+  name: MyString
+  teacher: MyString
+  time: MyString
+  place: MyString
+  volume: 1
+  now_selected: 1
