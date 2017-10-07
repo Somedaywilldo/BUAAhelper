@@ -60,57 +60,6 @@ class MicropostsController < ApplicationController
       flash[:success] = "已添加以下课程至选课队列："+message+" -----选课期间在线用户多，请耐心等待服务器响应，不要频繁点击查看按钮~"
       redirect_to root_url
     end
-    
-      '''
-      if(current_user.microposts.find_by(content: get_abstract(cou))==nil)
-
-        @micropost = current_user.microposts.build(content: get_abstract(cou))
-
-        if @micropost.save
-
-          tmp_cou=Course.find_by(name:cou)
-          tmp_cou.now_selected+=1
-          tmp_cou.save
-
-          if(message!="")
-            message+=" || "+cou
-          else
-            message+=cou
-          end  
-        else
-          @feed_items = []
-          #render root_url
-          redirect_to root_url
-          return
-        end
-      else 
-        repeat_course=1
-      end
-      '''
-
-    
-
-    '''
-    if message=="" && repeat_course==1
-      flash[:danger] = "请不要重复选课哦！"
-      @feed_items = []
-      redirect_to root_url
-      repeat_course=0
-    elsif message==""
-      flash[:danger] = "请选择课程~"
-      @feed_items = []
-      redirect_to root_url
-    else
-      if @micropost.save
-        flash[:success] = "已添加以下课程到选课队列："+message
-        redirect_to root_url
-      else
-        @feed_items = []
-        #render static_pages/home
-        redirect_to root_url
-      end
-    end
-    '''
   
   end
 

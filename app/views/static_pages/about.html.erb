@@ -1,8 +1,18 @@
 <% provide(:title, "关于") %> 
 <h1>BUAA选课宝</h1>
 <p>
-	BUAA选课宝由Someday使用Ruby on Rails框架开发，部署在阿里云ECS上。
+	BUAA选课宝是由北京航空航天大学计算机学院本科生尹一航开发的网页端选课平台。旨在使用博彦科技提供的AWS SQS服务（亚马逊消息队列云服务），缓解选课平台在选课吞吐量高峰时经常出现的拥挤状况，进而优化学生选课时的体验，解决选课网站上不去的烦恼。
 </p>
 <p>
-	
+BUAA选课宝使用Ruby on Rails框架开发，使用语言为Ruby+HTML+CSS+Javascript，部署在阿里云ECS服务器上，并使用阿里云邮件推送服务，项目地址为：www.somedaywill.cn:3000。
 </p>
+<p>
+BUAA选课宝具有完整的用户注册、邮件激活和管理员功能，以及实现常用设备免登陆的持久会话功能。选课请求使用博彦科技AWS SQS服务进行发送，由平台后端异步处理，可以避免吞吐量高峰的影响。
+</p>
+<p>
+BUAA选课宝刚刚诞生不久，任何BUG或者建议，欢迎联系作者：someday@buaa.edu.cn。
+</p>
+
+<div class="center">
+	<%= link_to image_tag("BUAAhelper_logo_white.png", alt: "BUAAhelper_logo"),'http://somedaywill.cn/'%>
+</div>

@@ -39,18 +39,22 @@
   </div>
 
 </div>
+
+
+
 <% else %>
 
 
   <div class="center jumbotron">
     <h1>欢迎使用BUAA选课宝！</h1>
-    <h2>妈妈再也不用担心你上不去选课网站了~</h2>
+    <h2>妈妈再也不用担心你选不上课啦~</h2>
     <%= link_to "学生注册！", signup_path, class: "btn btn-lg btn-primary" %> 
   </div>
 
 
    <div class="center">
-      <%= link_to image_tag("SomedayWill_QR_code.jpg", alt: "SomedayWill_QR_code"),'http://somedaywill.cn/'%>
 
+      <%= link_to image_tag("BUAAhelper_logo_white.png", alt: "BUAAhelper_logo"),'http://somedaywill.cn/'%>
+    </div>
 
 <% end %>

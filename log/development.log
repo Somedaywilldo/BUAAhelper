@@ -36258,3 +36258,134 @@ Completed 200 OK in 65ms (Views: 59.5ms | ActiveRecord: 0.6ms)
 [ActiveJob] [ChooseCourseJob] [21d74609-39d4-4266-a5d3-258a054fcea6] Enqueued ChooseCourseJob (Job ID: 8d657d7d-2955-4780-a3cb-9ace933a962b) to Async(default)
 [ActiveJob] [ChooseCourseJob] [21d74609-39d4-4266-a5d3-258a054fcea6] Performed ChooseCourseJob from Async(default) in 3053.41ms
 [ActiveJob] [ChooseCourseJob] [8d657d7d-2955-4780-a3cb-9ace933a962b] Performed ChooseCourseJob from Async(default) in 152.8ms
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMicropost Load (0.3ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC[0m  [["user_id", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 188]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 187]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 180]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 179]]
+  [1m[35mSQL (0.0ms)[0m  [1m[31mDELETE FROM "microposts" WHERE "microposts"."id" = ?[0m  [["id", 178]]
+  [1m[35mSQL (0.1ms)[0m  [1m[31mDELETE FROM "users" WHERE "users"."id" = ?[0m  [["id", 1]]
+  [1m[35m (2.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [45459cdf-ad5a-43ef-86bc-210ab7150e9c] Performing ChooseCourseJob from Async(default)
+[ActiveJob] Enqueued ChooseCourseJob (Job ID: 45459cdf-ad5a-43ef-86bc-210ab7150e9c) to Async(default)
+[ActiveJob] [ChooseCourseJob] [45459cdf-ad5a-43ef-86bc-210ab7150e9c] Performed ChooseCourseJob from Async(default) in 408.73ms
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa] Performing ChooseCourseJob from Async(default)
+[ActiveJob] Enqueued ChooseCourseJob (Job ID: 18b63d58-4395-483c-8710-22293d2fa7aa) to Async(default)
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."school_number" = ? LIMIT ?[0m  [["school_number", "16061013"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."course_id" = ? LIMIT ?[0m  [["course_id", "B1A012130"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "工科数学分析"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[36mMicropost Load (0.5ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."content" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?[0m  [["user_id", 4], ["content", "工科数学分析 || 杨小远 || 周二3、4节 || 数学与自然科学类 || 5.0学分"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "工科数学分析"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "工科数学分析 || 杨小远 || 周二3、4节 || 数学与自然科学类 || 5.0学分"], ["user_id", 4], ["created_at", "2017-10-07 14:18:47.047812"], ["updated_at", "2017-10-07 14:18:47.047812"]]
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "courses" SET "now_selected" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["now_selected", 2], ["updated_at", "2017-10-07 14:18:47.051372"], ["id", 1]]
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa]   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa] Enqueued ChooseCourseJob (Job ID: feea76c1-7a73-4cb6-b4dc-52a9c47b18ca) to Async(default)
+[ActiveJob] [ChooseCourseJob] [18b63d58-4395-483c-8710-22293d2fa7aa] Performed ChooseCourseJob from Async(default) in 2140.65ms
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."school_number" = ? LIMIT ?[0m  [["school_number", "16061013"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."course_id" = ? LIMIT ?[0m  [["course_id", "B1D012340"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "体育：散打"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."content" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?[0m  [["user_id", 4], ["content", "体育：散打 || 周若夫 || 周二5节 || 体育类 || 0.5学分"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "体育：散打"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "体育：散打 || 周若夫 || 周二5节 || 体育类 || 0.5学分"], ["user_id", 4], ["created_at", "2017-10-07 14:18:49.130803"], ["updated_at", "2017-10-07 14:18:49.130803"]]
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "courses" SET "now_selected" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["now_selected", 1], ["updated_at", "2017-10-07 14:18:49.133880"], ["id", 5]]
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca]   [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca] Enqueued ChooseCourseJob (Job ID: 2ed1591b-7a84-48d6-9efd-e59eb6485800) to Async(default)
+[ActiveJob] [ChooseCourseJob] [feea76c1-7a73-4cb6-b4dc-52a9c47b18ca] Performed ChooseCourseJob from Async(default) in 2088.2ms
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."school_number" = ? LIMIT ?[0m  [["school_number", "16061013"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."course_id" = ? LIMIT ?[0m  [["course_id", "B2B032130"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "数据结构"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."content" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?[0m  [["user_id", 4], ["content", "数据结构 || 晏海华 || 周五5、6节 || 核心专业类 || 4.0学分"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "数据结构"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "数据结构 || 晏海华 || 周五5、6节 || 核心专业类 || 4.0学分"], ["user_id", 4], ["created_at", "2017-10-07 14:18:51.205688"], ["updated_at", "2017-10-07 14:18:51.205688"]]
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "courses" SET "now_selected" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["now_selected", 2], ["updated_at", "2017-10-07 14:18:51.208087"], ["id", 2]]
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800]   [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800] Enqueued ChooseCourseJob (Job ID: c3d0fda7-6634-4b24-93c7-338cd9c987ce) to Async(default)
+[ActiveJob] [ChooseCourseJob] [2ed1591b-7a84-48d6-9efd-e59eb6485800] Performed ChooseCourseJob from Async(default) in 2076.11ms
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."school_number" = ? LIMIT ?[0m  [["school_number", "16061013"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."course_id" = ? LIMIT ?[0m  [["course_id", "B1C012450"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "批判式阅读与写作"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."content" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?[0m  [["user_id", 4], ["content", "批判式阅读与写作 || 张欣叶 || 周四1、2节 || 语言类 || 2.0学分"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[36mCourse Load (0.0ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "批判式阅读与写作"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "批判式阅读与写作 || 张欣叶 || 周四1、2节 || 语言类 || 2.0学分"], ["user_id", 4], ["created_at", "2017-10-07 14:18:53.284022"], ["updated_at", "2017-10-07 14:18:53.284022"]]
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "courses" SET "now_selected" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["now_selected", 2], ["updated_at", "2017-10-07 14:18:53.287097"], ["id", 4]]
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce]   [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce] Enqueued ChooseCourseJob (Job ID: 03957807-5ce9-440e-befd-bf2037849b12) to Async(default)
+[ActiveJob] [ChooseCourseJob] [c3d0fda7-6634-4b24-93c7-338cd9c987ce] Performed ChooseCourseJob from Async(default) in 2088.18ms
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."school_number" = ? LIMIT ?[0m  [["school_number", "16061013"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."course_id" = ? LIMIT ?[0m  [["course_id", "B1G013340"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "发明、创新与创业"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."content" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?[0m  [["user_id", 4], ["content", "发明、创新与创业 || 雷鹏 || 周四1、2节 || 一般通识类 || 2.0学分"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "发明、创新与创业"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "发明、创新与创业 || 雷鹏 || 周四1、2节 || 一般通识类 || 2.0学分"], ["user_id", 4], ["created_at", "2017-10-07 14:18:55.401154"], ["updated_at", "2017-10-07 14:18:55.401154"]]
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "courses" SET "now_selected" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["now_selected", 2], ["updated_at", "2017-10-07 14:18:55.404090"], ["id", 7]]
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12]   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12] Enqueued ChooseCourseJob (Job ID: 54d1e2ec-bff6-4490-9268-659adedb0da2) to Async(default)
+[ActiveJob] [ChooseCourseJob] [03957807-5ce9-440e-befd-bf2037849b12] Performed ChooseCourseJob from Async(default) in 2115.12ms
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."school_number" = ? LIMIT ?[0m  [["school_number", "16061013"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."course_id" = ? LIMIT ?[0m  [["course_id", "B10765430"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "舞蹈之美"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."content" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?[0m  [["user_id", 4], ["content", "舞蹈之美 || 井志伟 || 周三7、8节 || 核心通识类 || 2.0学分"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "舞蹈之美"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "舞蹈之美 || 井志伟 || 周三7、8节 || 核心通识类 || 2.0学分"], ["user_id", 4], ["created_at", "2017-10-07 14:18:57.505549"], ["updated_at", "2017-10-07 14:18:57.505549"]]
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "courses" SET "now_selected" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["now_selected", 1], ["updated_at", "2017-10-07 14:18:57.508078"], ["id", 6]]
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2]   [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2] Enqueued ChooseCourseJob (Job ID: 3eb06100-2456-4f9b-b160-5cb25ee97282) to Async(default)
+[ActiveJob] [ChooseCourseJob] [54d1e2ec-bff6-4490-9268-659adedb0da2] Performed ChooseCourseJob from Async(default) in 2109.92ms
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."school_number" = ? LIMIT ?[0m  [["school_number", "16061013"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."course_id" = ? LIMIT ?[0m  [["course_id", "B3A012140"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "计算机组成原理"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."content" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?[0m  [["user_id", 4], ["content", "计算机组成原理 || 高小鹏 || 周三3、4节；周五3、4节 || 核心专业类 || 7.0学分"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "计算机组成原理"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "计算机组成原理 || 高小鹏 || 周三3、4节；周五3、4节 || 核心专业类 || 7.0学分"], ["user_id", 4], ["created_at", "2017-10-07 14:18:59.597160"], ["updated_at", "2017-10-07 14:18:59.597160"]]
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "courses" SET "now_selected" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["now_selected", 2], ["updated_at", "2017-10-07 14:18:59.599929"], ["id", 3]]
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282]   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [b2f0b35e-30ef-443b-a37a-4d62eb9b5122] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282] Enqueued ChooseCourseJob (Job ID: b2f0b35e-30ef-443b-a37a-4d62eb9b5122) to Async(default)
+[ActiveJob] [ChooseCourseJob] [3eb06100-2456-4f9b-b160-5cb25ee97282] Performed ChooseCourseJob from Async(default) in 2101.42ms
+[ActiveJob] [ChooseCourseJob] [49b08286-c5de-4d12-a306-cbcf1dde7a18] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [b2f0b35e-30ef-443b-a37a-4d62eb9b5122] Enqueued ChooseCourseJob (Job ID: 49b08286-c5de-4d12-a306-cbcf1dde7a18) to Async(default)
+[ActiveJob] [ChooseCourseJob] [b2f0b35e-30ef-443b-a37a-4d62eb9b5122] Performed ChooseCourseJob from Async(default) in 3059.4ms
+[ActiveJob] [ChooseCourseJob] [49b08286-c5de-4d12-a306-cbcf1dde7a18] Performed ChooseCourseJob from Async(default) in 316.31ms
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) AND ("users"."id" != ?) LIMIT ?[0m  [["email", "714439471@qq.com"], ["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = ?, "admin" = ? WHERE "users"."id" = ?[0m  [["updated_at", "2017-10-07 14:27:31.617346"], ["admin", "t"], ["id", 4]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" IS NULL LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "123@123.com"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? ORDER BY "microposts"."created_at" DESC[0m  [["user_id", 5]]
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
