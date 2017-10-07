@@ -19,6 +19,10 @@ class MicropostsController < ApplicationController
 
         if @micropost.save
 
+          tmp_cou=Course.find_by(name:cou)
+          tmp_cou.now_selected+=1
+          tmp_cou.save
+
           if(message!="")
             message+=" || "+cou
           else
@@ -59,18 +63,21 @@ class MicropostsController < ApplicationController
   end
 
   def destroy
+    cou=@micropost.content.split(" || ")[0]
+
+    #flash[:danger] = a
+
+    tmp_cou=Course.find_by(name:cou)
+    tmp_cou.now_selected-=1
+    tmp_cou.save
+
     @micropost.destroy
-    flash[:danger] = "课程已退选！"
+    #flash[:danger] = "课程已退选！"
     redirect_to request.referrer || root_url
   end
-
-
   
   #skip_before_filter :verify_authenticity_token  
  # config.middleware.use ActionDispatch::Flash
-  
-  
-
   
   private
     def micropost_params 
