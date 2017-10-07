@@ -51,20 +51,17 @@
 
       </table>
    
-        <div class="col-md-3"> 
+        <div class="col-md-2"> 
         </div>
-        <div class="col-md-6"> 
+        <div class="col-md-4"> 
           <%= f.submit "添加课程", class: "btn btn-success" %> 
         </div>
-      
-        <!--
-      </div>
-      <div class="row">
-        
-        <div class="col-md-6"> 
-          <%= f.submit "确认无误，选课！", class: "btn btn-danger" %> 
+        <div class="col-md-4"> 
+
+          <%= submit_tag "查看已选课程", :name=>"refresh", class: "btn btn-danger"%>
+          
         </div>
-      </div>
-        -->
+      
+        
 
 <% end %>
