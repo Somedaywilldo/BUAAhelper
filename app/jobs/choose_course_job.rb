@@ -2,6 +2,20 @@
 class ChooseCourseJob < ApplicationJob
   queue_as :default
 
+ '''
+  around_perform do |job, block|
+    # Do something before perform
+    block.call
+    # Do something after perform
+  end
+ '''
+
+  after_perform do |job|
+  	sleep(2)
+  	ChooseCourseJob.perform_later
+  end
+
+
   def perform()
     # Do something later
     queue_url='https://sqs.cn-north-1.amazonaws.com.cn/444376591338/BUAAhelper'
@@ -10,11 +24,16 @@ class ChooseCourseJob < ApplicationJob
 	  queue_url: queue_url, 
 	  message_attribute_names: ["All"], # Receive all custom attributes.
 	  max_number_of_messages: 1, # Receive at most one message.
-	  wait_time_seconds: 0 # Do not wait to check for the message.
+	  wait_time_seconds: 1 # Do not wait to check for the message.
 	})
 
     receive_message_result.messages.each do |message|
 	  puts message.body 
+
+	  #if(message.body=="Hello world")
+	 # 	return
+	  #end
+
 	  puts "user_school_number: #{message.message_attributes["user_school_number"]["string_value"]}"
 	  puts "course_course_id: #{message.message_attributes["course_course_id"]["string_value"]}"
 	  puts "action: #{message.message_attributes["action"]["string_value"]}"  

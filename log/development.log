@@ -36182,3 +36182,79 @@ Processing by StaticPagesController#home as HTML
 Completed 200 OK in 65ms (Views: 59.5ms | ActiveRecord: 0.6ms)
 
 
+[ActiveJob] Enqueued ChooseCourseJob (Job ID: bd485e48-4892-4a38-a673-17588fc899bd) to Async(default)
+[ActiveJob] [ChooseCourseJob] [bd485e48-4892-4a38-a673-17588fc899bd] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [bd485e48-4892-4a38-a673-17588fc899bd] Performed ChooseCourseJob from Async(default) in 836.87ms
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a] Performing ChooseCourseJob from Async(default)
+[ActiveJob] Enqueued ChooseCourseJob (Job ID: 06934379-df3d-4ef6-a321-af72a77da20a) to Async(default)
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."school_number" = ? LIMIT ?[0m  [["school_number", "16061013"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."course_id" = ? LIMIT ?[0m  [["course_id", "B2B032130"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "数据结构"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[36mMicropost Load (0.2ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."content" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["content", "数据结构 || 晏海华 || 周五5、6节 || 核心专业类 || 4.0学分"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "数据结构"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "数据结构 || 晏海华 || 周五5、6节 || 核心专业类 || 4.0学分"], ["user_id", 1], ["created_at", "2017-10-07 11:11:58.097361"], ["updated_at", "2017-10-07 11:11:58.097361"]]
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "courses" SET "now_selected" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["now_selected", 1], ["updated_at", "2017-10-07 11:11:58.100609"], ["id", 2]]
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a]   [1m[35m (0.7ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [9f6cb97c-3ceb-49f8-aa90-09d39b7ffa7f] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a] Enqueued ChooseCourseJob (Job ID: 9f6cb97c-3ceb-49f8-aa90-09d39b7ffa7f) to Async(default)
+[ActiveJob] [ChooseCourseJob] [06934379-df3d-4ef6-a321-af72a77da20a] Performed ChooseCourseJob from Async(default) in 2191.03ms
+[ActiveJob] [ChooseCourseJob] [9f6cb97c-3ceb-49f8-aa90-09d39b7ffa7f] Performed ChooseCourseJob from Async(default) in 48.5ms
+[ActiveJob] Enqueued ChooseCourseJob (Job ID: 978728b3-dd55-4039-a396-82509d1918ea) to Async(default)
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."school_number" = ? LIMIT ?[0m  [["school_number", "16061013"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."course_id" = ? LIMIT ?[0m  [["course_id", "B3A012140"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "计算机组成原理"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[36mMicropost Load (0.1ms)[0m  [1m[34mSELECT  "microposts".* FROM "microposts" WHERE "microposts"."user_id" = ? AND "microposts"."content" = ? ORDER BY "microposts"."created_at" DESC LIMIT ?[0m  [["user_id", 1], ["content", "计算机组成原理 || 高小鹏 || 周三3、4节；周五3、4节 || 核心专业类 || 7.0学分"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[36mCourse Load (0.1ms)[0m  [1m[34mSELECT  "courses".* FROM "courses" WHERE "courses"."name" = ? LIMIT ?[0m  [["name", "计算机组成原理"], ["LIMIT", 1]]
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "microposts" ("content", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["content", "计算机组成原理 || 高小鹏 || 周三3、4节；周五3、4节 || 核心专业类 || 7.0学分"], ["user_id", 1], ["created_at", "2017-10-07 11:12:22.512530"], ["updated_at", "2017-10-07 11:12:22.512530"]]
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[35mSQL (0.2ms)[0m  [1m[33mUPDATE "courses" SET "now_selected" = ?, "updated_at" = ? WHERE "courses"."id" = ?[0m  [["now_selected", 1], ["updated_at", "2017-10-07 11:12:22.515788"], ["id", 3]]
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea]   [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ChooseCourseJob] [ebd18d67-2774-4318-b48f-dfa63ddf899d] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea] Enqueued ChooseCourseJob (Job ID: ebd18d67-2774-4318-b48f-dfa63ddf899d) to Async(default)
+[ActiveJob] [ChooseCourseJob] [978728b3-dd55-4039-a396-82509d1918ea] Performed ChooseCourseJob from Async(default) in 2127.0ms
+[ActiveJob] [ChooseCourseJob] [646bb879-f029-4cd8-8690-34c5ccfbbcd2] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [ebd18d67-2774-4318-b48f-dfa63ddf899d] Enqueued ChooseCourseJob (Job ID: 646bb879-f029-4cd8-8690-34c5ccfbbcd2) to Async(default)
+[ActiveJob] [ChooseCourseJob] [ebd18d67-2774-4318-b48f-dfa63ddf899d] Performed ChooseCourseJob from Async(default) in 3064.89ms
+[ActiveJob] [ChooseCourseJob] [4e7dfec3-da84-4197-b019-9eeed971cc54] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [646bb879-f029-4cd8-8690-34c5ccfbbcd2] Enqueued ChooseCourseJob (Job ID: 4e7dfec3-da84-4197-b019-9eeed971cc54) to Async(default)
+[ActiveJob] [ChooseCourseJob] [646bb879-f029-4cd8-8690-34c5ccfbbcd2] Performed ChooseCourseJob from Async(default) in 3396.4ms
+[ActiveJob] [ChooseCourseJob] [4e7dfec3-da84-4197-b019-9eeed971cc54] Performed ChooseCourseJob from Async(default) in 49.25ms
+[ActiveJob] Enqueued ChooseCourseJob (Job ID: daed3b4f-5bbf-47e6-9817-06ebae413ea2) to Async(default)
+[ActiveJob] [ChooseCourseJob] [daed3b4f-5bbf-47e6-9817-06ebae413ea2] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [daed3b4f-5bbf-47e6-9817-06ebae413ea2] Performed ChooseCourseJob from Async(default) in 1559.11ms
+[ActiveJob] [ChooseCourseJob] [597186fe-98b9-4bb2-abfb-ec38a6548880] Performing ChooseCourseJob from Async(default)
+[ActiveJob] Enqueued ChooseCourseJob (Job ID: 597186fe-98b9-4bb2-abfb-ec38a6548880) to Async(default)
+[ActiveJob] [ChooseCourseJob] [7c4cac74-1e10-4061-9539-05b3406ff3ec] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [597186fe-98b9-4bb2-abfb-ec38a6548880] Enqueued ChooseCourseJob (Job ID: 7c4cac74-1e10-4061-9539-05b3406ff3ec) to Async(default)
+[ActiveJob] [ChooseCourseJob] [597186fe-98b9-4bb2-abfb-ec38a6548880] Performed ChooseCourseJob from Async(default) in 3057.37ms
+[ActiveJob] [ChooseCourseJob] [af03061b-b8d9-408b-8cd8-3eaf12ef66ba] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [7c4cac74-1e10-4061-9539-05b3406ff3ec] Enqueued ChooseCourseJob (Job ID: af03061b-b8d9-408b-8cd8-3eaf12ef66ba) to Async(default)
+[ActiveJob] [ChooseCourseJob] [7c4cac74-1e10-4061-9539-05b3406ff3ec] Performed ChooseCourseJob from Async(default) in 3064.93ms
+[ActiveJob] [ChooseCourseJob] [bbdc762f-d852-4589-9d9f-f57062e711c1] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [af03061b-b8d9-408b-8cd8-3eaf12ef66ba] Enqueued ChooseCourseJob (Job ID: bbdc762f-d852-4589-9d9f-f57062e711c1) to Async(default)
+[ActiveJob] [ChooseCourseJob] [af03061b-b8d9-408b-8cd8-3eaf12ef66ba] Performed ChooseCourseJob from Async(default) in 3051.39ms
+[ActiveJob] [ChooseCourseJob] [0416ebc2-205b-49e1-8ba6-c40be07dc0b2] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [bbdc762f-d852-4589-9d9f-f57062e711c1] Enqueued ChooseCourseJob (Job ID: 0416ebc2-205b-49e1-8ba6-c40be07dc0b2) to Async(default)
+[ActiveJob] [ChooseCourseJob] [bbdc762f-d852-4589-9d9f-f57062e711c1] Performed ChooseCourseJob from Async(default) in 3050.87ms
+[ActiveJob] [ChooseCourseJob] [2a5a50b1-6fd4-4a10-bc0c-65b3cc31a045] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [0416ebc2-205b-49e1-8ba6-c40be07dc0b2] Enqueued ChooseCourseJob (Job ID: 2a5a50b1-6fd4-4a10-bc0c-65b3cc31a045) to Async(default)
+[ActiveJob] [ChooseCourseJob] [0416ebc2-205b-49e1-8ba6-c40be07dc0b2] Performed ChooseCourseJob from Async(default) in 3063.48ms
+[ActiveJob] [ChooseCourseJob] [ca67bd49-330d-4884-a2c3-3bc50d53611d] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [2a5a50b1-6fd4-4a10-bc0c-65b3cc31a045] Enqueued ChooseCourseJob (Job ID: ca67bd49-330d-4884-a2c3-3bc50d53611d) to Async(default)
+[ActiveJob] [ChooseCourseJob] [2a5a50b1-6fd4-4a10-bc0c-65b3cc31a045] Performed ChooseCourseJob from Async(default) in 3060.87ms
+[ActiveJob] [ChooseCourseJob] [4c45a07b-b39a-40b6-8b22-6f7530c4509a] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [ca67bd49-330d-4884-a2c3-3bc50d53611d] Enqueued ChooseCourseJob (Job ID: 4c45a07b-b39a-40b6-8b22-6f7530c4509a) to Async(default)
+[ActiveJob] [ChooseCourseJob] [ca67bd49-330d-4884-a2c3-3bc50d53611d] Performed ChooseCourseJob from Async(default) in 3053.92ms
+[ActiveJob] [ChooseCourseJob] [21d74609-39d4-4266-a5d3-258a054fcea6] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [4c45a07b-b39a-40b6-8b22-6f7530c4509a] Enqueued ChooseCourseJob (Job ID: 21d74609-39d4-4266-a5d3-258a054fcea6) to Async(default)
+[ActiveJob] [ChooseCourseJob] [4c45a07b-b39a-40b6-8b22-6f7530c4509a] Performed ChooseCourseJob from Async(default) in 3051.84ms
+[ActiveJob] [ChooseCourseJob] [8d657d7d-2955-4780-a3cb-9ace933a962b] Performing ChooseCourseJob from Async(default)
+[ActiveJob] [ChooseCourseJob] [21d74609-39d4-4266-a5d3-258a054fcea6] Enqueued ChooseCourseJob (Job ID: 8d657d7d-2955-4780-a3cb-9ace933a962b) to Async(default)
+[ActiveJob] [ChooseCourseJob] [21d74609-39d4-4266-a5d3-258a054fcea6] Performed ChooseCourseJob from Async(default) in 3053.41ms
+[ActiveJob] [ChooseCourseJob] [8d657d7d-2955-4780-a3cb-9ace933a962b] Performed ChooseCourseJob from Async(default) in 152.8ms
